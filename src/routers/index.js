@@ -1,0 +1,22 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+import movieRouter from './movie'
+import mineRouter from './mine'
+import cinemaRouter from './cinema'
+
+Vue.use(Router);
+
+export default new Router({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes: [
+    movieRouter,
+    mineRouter,
+    cinemaRouter,
+    {
+      //路由重定向，在找不到路由时跳转到movie
+      path: '/*',
+      redirect: '/movie'
+    }
+  ]
+})
