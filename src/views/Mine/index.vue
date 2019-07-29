@@ -5,7 +5,7 @@
         <Login />
       </div>
       <TabBar />
-    </div>  
+    </div>
 </template>
 
 <script>
